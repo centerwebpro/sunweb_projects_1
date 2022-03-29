@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: #274646;
+    
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1320px;
+}
+
+.topMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 54px;
+}
+
+.topMain-left {
+    display: flex;
+    flex-direction: row;
+    margin-top: 19px;
+}
+
+.topMain-right {
+    display: flex;
+    flex-direction: row;
+    margin-top: 19px;
+}
+
+.topMain-left__hamburger {
+    width: 16px;
+    height: 12px;
+    margin-right: 28px;
+}
+
+.topMain-left__logo {
+    width: 196px;
+    height: 16px;
+    margin-right: 24px;
+}
+
+.topMain-left__phone {
+    margin-top: 0;
+    font-size: 14px;
+    /* line-height: 16px; */
+    color: #A0A0A0;
+    margin-right: 26.53px;
+}
+
+.topMain-left__locationAdd {
+    width: 12.94px;
+    height: 15px;
+    margin-right: 8.53px;
+}
+
+.topMain-left__address {
+    margin-top: 0;
+    color: #FFE091;
+    font-size: 14px;
+    /* line-height: 16px; */
+}
+
+.topMain-right__shimingi {
+    width: 18px;
+    height: 18px;
+}
+
+.topMain-right__shoppingBag {
+    margin-left: 26.61px;
+    width: 18px;
+    height: 18px;
+}
+
+.topMain-right__shoppingBag-amount {
+    display: flex;
+    margin-top: 0;
+    /* margin-left: 2.61px; */
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 12px;
+    color: #FFFFFF;
+    background-color: #B20D30;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.topMain-right__price {
+    margin-top: 0;
+    margin-left: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.topMain-right__price::after {
+    content: ' ₽';
+}
