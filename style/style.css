@@ -1,17 +1,26 @@
 body {
     margin: 0;
-}
-
-.header {
-    width: 100%;
-    background-color: #274646;
-    
+    font-family: 'Value Sans Pro';
 }
 
 .container {
     margin: 0 auto;
     max-width: 1320px;
 }
+
+
+
+/* ---Header--- */
+.header {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.topHeader {
+    width: 100%;
+    background-color: #274646;
+    
+}
+
 
 .topMain {
     display: flex;
@@ -33,15 +42,27 @@ body {
 }
 
 .topMain-left__hamburger {
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 0;
+}
+
+.topMain-left__hamburger-image {
+    position: relative;
+    top: -8px;
     width: 16px;
     height: 12px;
-    margin-right: 28px;
 }
 
 .topMain-left__logo {
+    margin-left: 28px;
+    margin-right: 24px;
+
+}
+
+.topMain-left__logo-image {
     width: 196px;
     height: 16px;
-    margin-right: 24px;
 }
 
 .topMain-left__phone {
@@ -50,15 +71,21 @@ body {
     /* line-height: 16px; */
     color: #A0A0A0;
     margin-right: 26.53px;
+    text-decoration: none;
 }
 
 .topMain-left__locationAdd {
+    display: flex;
+    text-decoration: none;
+}
+
+.topMain-left__locationAdd-image {
     width: 12.94px;
     height: 15px;
     margin-right: 8.53px;
 }
 
-.topMain-left__address {
+.topMain-left__locationAdd-address {
     margin-top: 0;
     color: #FFE091;
     font-size: 14px;
@@ -66,11 +93,31 @@ body {
 }
 
 .topMain-right__shimingi {
+    display: flex;
+    text-decoration: none;
+}
+
+.topMain-right__shimingi-image {
+    margin-right: 8.69px;
     width: 18px;
     height: 18px;
 }
 
+.topMain-right__shimingi-title {
+    margin-top: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFBDC8;
+}
+
 .topMain-right__shoppingBag {
+    display: flex;
+    text-decoration: none;
+}
+
+.topMain-right__shoppingBag-image {
     margin-left: 26.61px;
     width: 18px;
     height: 18px;
@@ -93,7 +140,7 @@ body {
     justify-content: center;
 }
 
-.topMain-right__price {
+.topMain-right__shoppingBag-price {
     margin-top: 0;
     margin-left: 8px;
     font-style: normal;
@@ -103,6 +150,58 @@ body {
     color: #FFFFFF;
 }
 
-.topMain-right__price::after {
+.topMain-right__shoppingBag-price::after {
     content: ' ₽';
+}
+
+.mainHeader {
+}
+
+.middleMain {
+    background-color: #fff;
+    padding: 16px 0;
+}
+
+.middleMain-item {
+    margin-right: 48px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: #274646;
+    padding-bottom: 16px;
+    text-decoration: none;
+}
+
+.middleMain-item:hover {
+    border-bottom: 3px solid #274646;
+
+}
+
+.middleMain-hr {
+    margin: 0 0 8px 0;
+    border: 1px solid #E5E5E5;
+}
+
+.bottomMain {
+    margin: 0px 0 0 0;
+    padding: 16px 0 24px 0;
+}
+
+.bottomMain-item {
+    margin: 0 16px 0 0;
+    padding: 12px 12px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: #6B6B6B;
+    text-decoration: none;
+    border: 1px solid #E5E5E5;
+    border-radius: 25px;
+}
+
+.bottomMain-item:hover {
+    color: #274646;
+    background: #E9E6E6;
 }
