@@ -5,7 +5,9 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 1320px;
+    /* width: 540px; */
+
+    
 }
 
 
@@ -24,87 +26,82 @@ body {
 
 .topMain {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     height: 54px;
 }
 
 .topMain-left {
     display: flex;
-    flex-direction: row;
-    margin-top: 19px;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
 }
 
 .topMain-right {
     display: flex;
-    flex-direction: row;
-    margin-top: 19px;
+    justify-content: center;
+    align-items: center;
+    gap: 26.61px;
+
 }
 
 .topMain-left__hamburger {
-    background: rgba(255, 255, 255, 0);
+    background: none;
     border: none;
-    padding: 0;
+    cursor: pointer;
 }
 
-.topMain-left__hamburger-image {
-    position: relative;
-    top: -8px;
-    width: 16px;
-    height: 12px;
+/* .topMain-left__hamburger-image {
 }
 
 .topMain-left__logo {
-    margin-left: 28px;
-    margin-right: 24px;
-
-}
+} */
 
 .topMain-left__logo-image {
-    width: 196px;
-    height: 16px;
+    width: 100%;
+    height: auto;
 }
 
 .topMain-left__phone {
-    margin-top: 0;
     font-size: 14px;
-    /* line-height: 16px; */
     color: #A0A0A0;
-    margin-right: 26.53px;
+    /* margin-right: 26.53px; */
     text-decoration: none;
 }
 
 .topMain-left__locationAdd {
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
+    gap: 8.53px;
 }
 
 .topMain-left__locationAdd-image {
     width: 12.94px;
     height: 15px;
-    margin-right: 8.53px;
+    /* margin-right: 8.53px; */
 }
 
 .topMain-left__locationAdd-address {
-    margin-top: 0;
     color: #FFE091;
     font-size: 14px;
-    /* line-height: 16px; */
 }
 
 .topMain-right__shimingi {
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
+    gap: 8.69px;
 }
 
 .topMain-right__shimingi-image {
-    margin-right: 8.69px;
-    width: 18px;
-    height: 18px;
+    width: 100%;
+    height: auto;
 }
 
 .topMain-right__shimingi-title {
-    margin-top: 0;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -114,34 +111,38 @@ body {
 
 .topMain-right__shoppingBag {
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
+    gap: 11.8px;
+}
+
+.topMain-right__shoppingBag:last-child {
+    gap: 0px;
 }
 
 .topMain-right__shoppingBag-image {
-    margin-left: 26.61px;
     width: 18px;
     height: 18px;
 }
 
 .topMain-right__shoppingBag-amount {
     display: flex;
-    margin-top: 0;
-    /* margin-left: 2.61px; */
+    padding: 0 3px;
     font-style: normal;
     font-weight: 900;
     font-size: 12px;
     line-height: 12px;
     color: #FFFFFF;
     background-color: #B20D30;
-    border-radius: 50%;
-    width: 18px;
+    border-radius: 10px;
+    min-width: 18px;
     height: 18px;
     align-items: center;
     justify-content: center;
 }
 
 .topMain-right__shoppingBag-price {
-    margin-top: 0;
     margin-left: 8px;
     font-style: normal;
     font-weight: 700;
@@ -154,8 +155,8 @@ body {
     content: ' ₽';
 }
 
-.mainHeader {
-}
+/* .mainHeader {
+} */
 
 .middleMain {
     background-color: #fff;
@@ -184,7 +185,6 @@ body {
 }
 
 .bottomMain {
-    margin: 0px 0 0 0;
     padding: 16px 0 24px 0;
 }
 
@@ -204,4 +204,42 @@ body {
 .bottomMain-item:hover {
     color: #274646;
     background: #E9E6E6;
+}
+
+
+/* Containers */
+@media (max-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width:577px) and (max-width: 768px) {
+    .container {
+        /* max-width: 720px; */
+        max-width: calc(100% - 48px);
+    }
+}
+@media (min-width:769px) and (max-width: 992px) {
+    .container {
+        /* max-width: 960px; */
+        max-width: calc(100% - 32px);
+    }
+}
+@media (min-width:993px) and (max-width: 1200px) {
+    .container {
+        /* max-width: 1140px; */
+        max-width: calc(100% - 60px);
+    }
+}
+@media (min-width:1201px) and (max-width: 1400px) {
+    .container {
+        /* max-width: 1320px; */
+        max-width: calc(100% - 80px);
+    }
+}
+@media (min-width:1401px) {
+    .container {
+        /* max-width: 1320px; */
+        width: 1320px;
+    }
 }
