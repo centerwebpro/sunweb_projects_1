@@ -5,14 +5,11 @@ body {
 
 .container {
     margin: 0 auto;
-    /* width: 540px; */
-
-    
 }
 
 
 
-/* ---Header--- */
+/* ---Header begin--- */
 .header {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -80,7 +77,6 @@ body {
 .topMain-left__locationAdd-image {
     width: 12.94px;
     height: 15px;
-    /* margin-right: 8.53px; */
 }
 
 .topMain-left__locationAdd-address {
@@ -159,19 +155,31 @@ body {
 } */
 
 .middleMain {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    flex-wrap: nowrap;
+    gap: 48px;
+    height: 48px;
     background-color: #fff;
-    padding: 16px 0;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.middleMain::-webkit-scrollbar {
+    display: none;
 }
 
 .middleMain-item {
-    margin-right: 48px;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 16px;
     color: #274646;
-    padding-bottom: 16px;
+    padding-bottom: 13px;
     text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 3px solid #fff;
 }
 
 .middleMain-item:hover {
@@ -180,17 +188,26 @@ body {
 }
 
 .middleMain-hr {
-    margin: 0 0 8px 0;
     border: 1px solid #E5E5E5;
 }
 
 .bottomMain {
-    padding: 16px 0 24px 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 56px;
+    gap: 12px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.bottomMain::-webkit-scrollbar {
+    display: none;
 }
 
 .bottomMain-item {
-    margin: 0 16px 0 0;
-    padding: 12px 12px;
+    padding: 12px;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -205,10 +222,10 @@ body {
     color: #274646;
     background: #E9E6E6;
 }
+/* ---Header end--- */
 
 
-/* Containers */
-
+/* Containers begin */
 @media (max-width: 576px) {
     .container {
         width: 100%;
@@ -227,15 +244,15 @@ body {
     }
 }
 
-@media (min-width: 993px) and  (max-width: 1200px) {
+@media (min-width: 993px) and  (max-width: 1280px) {
     .container {
         width: 960px;
     }
 }
 
-@media (min-width: 1201px) and (max-width:1400px) {
+@media (min-width: 1281px) and (max-width:1400px) {
     .container {
-        width: 1140px;
+        width: 1250px;
     }
 }
 
@@ -244,3 +261,4 @@ body {
         width: 1320px;
     }
 }
+/* Containers end */
