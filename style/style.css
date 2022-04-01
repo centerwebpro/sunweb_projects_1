@@ -5,6 +5,8 @@ body {
 
 .container {
     margin: 0 auto;
+    width: auto;
+    padding: 0 0.75rem;
 }
 
 
@@ -55,7 +57,7 @@ body {
 
 .topMain-left__logo {
     display: flex;
-    gap: 28px;
+    gap: 22px;
 }
 
 .topMain-left__logo-hamburger {
@@ -81,7 +83,10 @@ body {
 
 .topMain-left__phone {
     display: none;
+    font-style: normal;
+    font-weight: 700;
     font-size: 14px;
+    line-height: 16px;
     color: #A0A0A0;
     text-decoration: none;
 }
@@ -92,6 +97,7 @@ body {
     align-items: center;
     text-decoration: none;
     gap: 8.53px;
+    padding-left: 6px;
 }
 
 .topMain-left__locationAdd-image {
@@ -101,7 +107,10 @@ body {
 
 .topMain-left__locationAdd-address {
     color: #FFE091;
+    font-style: normal;
+    font-weight: 700;
     font-size: 14px;
+    line-height: 16px;
 }
 
 .topMain-right__shimingi {
@@ -180,11 +189,12 @@ body {
     justify-content: start;
     align-items: end;
     flex-wrap: nowrap;
-    gap: 48px;
+    gap: 49px;
     height: 48px;
     background-color: #fff;
     overflow: auto;
     white-space: nowrap;
+    padding-left: 16px;
 }
 
 .middleMain::-webkit-scrollbar {
@@ -219,10 +229,11 @@ body {
     align-items: center;
     flex-wrap: nowrap;
     height: 56px;
-    gap: 12px;
+    gap: 17px;
     overflow: auto;
     white-space: nowrap;
     background-color: #FFFFFF;
+    padding-left: 16px;
 }
 
 .bottomMain::-webkit-scrollbar {
@@ -256,9 +267,7 @@ main {
 
 /* ---Header end--- */
 
-.container {
-    width: 100%;
-}
+
 
 /* Containers begin */
 @media (min-width: 576px) {
@@ -278,7 +287,7 @@ main {
 
     .topMain-left {
         justify-content: center;
-        gap: 28px;
+        gap: 22px;
         width: auto;
     }
 
@@ -288,6 +297,14 @@ main {
 
     .topMain-left__logo-icon__mini {
         display: none;
+    }
+
+    .middleMain {
+        padding-left: 12px;
+    }
+
+    .bottomMain {
+        padding-left: 17px;
     }
 }
 
@@ -300,9 +317,13 @@ main {
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
     .container {
-        max-width: 1250px;
+        max-width: 1140px;
+    }
+
+    .topMain-left {
+        padding-left: 12px;
     }
 }
 
