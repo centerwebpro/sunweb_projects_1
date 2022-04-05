@@ -18,15 +18,15 @@ body {
     top: 0;
     width: 100%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    z-index: 100;
 }
 
 .top {
-    /* position: fixed; */
     width: 100%;
     background-color: #274646;
     
 }
-
 
 .main {
     display: flex;
@@ -64,8 +64,8 @@ body {
     cursor: pointer;
 }
 
-.main-left__logo-icon img {
-}
+/* .main-left__logo-icon img {
+} */
 
 .main-left__logo-icon__big {
     display: none;
@@ -265,10 +265,114 @@ main {
 
 
 
+/* ---Popular begin--- */
+.popular {
+    margin-top: 174px;
+}
+
+.popular-items {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 17px;
+    overflow: auto;
+}
+
+.popular-item {
+    height: 276px;
+    min-width: 152px;
+    margin-bottom: 34px;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 2px solid #FFBEC9;
+    padding: 2px;
+}
+
+/* scroll bar begin */
+.popular-items::-webkit-scrollbar {
+    height: 2px;
+}
+.popular-items::-webkit-scrollbar-thumb:hover {
+    background: #5f5f5f; 
+}
+.popular-items::-webkit-scrollbar-thumb {
+    background: #A0A0A0; 
+}
+.popular-items::-webkit-scrollbar-track {
+    background: #E5E5E5; 
+}
+/* scroll bar end */
+
+.popular-item__image {
+    width: auto;
+    height: 100%;
+}
+
+.scrolltop {
+    display: flex;
+    margin: 0;
+    gap: 176px;
+    background: linear-gradient(0deg, #F293A2 -0.01%, #F7BDC7 99.99%);
+    margin: 48px 0 64px 0;
+    overflow: hidden;
+}
+
+.scrolltop-text {
+    margin: 0;
+    font-family: 'Rimma_sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 100%;
+    color: #FFD8E1;
+    padding-bottom: 20.5px;
+    text-transform: uppercase;
+    animation: scrolltop 3s  linear infinite;
+    
+}
+
+@keyframes scrolltop {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-533.766px);
+    }
+}
+/* ---Popular end--- */
+
+
+
+
 /* Containers begin */
 @media (max-width: 575px) {
     .container {
         padding: 0 0.75rem;
+    }
+
+    .popular {
+        margin-top: 190px;
+    }
+
+    .popular-item {
+        margin-bottom: 34px;
+    }
+
+    .scrolltop {
+        margin: 36px 0 64px 0;
+    }
+
+    .scrolltop-text {
+        font-size: 60px;
+        
+    }
+
+    @keyframes scrolltop {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-444.320px);
+        }
     }
 }
 
@@ -276,6 +380,8 @@ main {
     .container {
         max-width: 540px;
     }
+
+    
 }
 
 @media (min-width: 768px) {
@@ -307,6 +413,10 @@ main {
 
     .bottom {
         padding-left: 17px;
+    }
+
+    .popular-items {
+        padding-left: 19px;
     }
 }
 
@@ -346,6 +456,116 @@ main {
     .main-left {
         padding-left: 0;
     }
+
+    .popular-items {
+        padding-left: 0px;
+    }
 }
 /* Containers end */
 
+
+
+/* Fonts begin */
+@font-face {
+    font-family: 'Value Sans Pro';
+    src: url('ValueSansPro-Regular.eot');
+    src: 
+        url('../styles/fonts/ValueSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../styles/fonts/ValueSansPro-Regular.woff2') format('woff2'),
+        url('../styles/fonts/ValueSansPro-Regular.woff') format('woff'),
+        url('../styles/fonts/ValueSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Value Sans Pro';
+    src: url('ValueSansPro-MediumItalic.eot');
+    src: 
+        url('../styles/fonts/ValueSansPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../styles/fonts/ValueSansPro-MediumItalic.woff2') format('woff2'),
+        url('../styles/fonts/ValueSansPro-MediumItalic.woff') format('woff'),
+        url('../styles/fonts/ValueSansPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Value Sans Pro';
+    src: url('ValueSansPro-Italic.eot');
+    src: 
+        url('../styles/fonts/ValueSansPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../styles/fonts/ValueSansPro-Italic.woff2') format('woff2'),
+        url('../styles/fonts/ValueSansPro-Italic.woff') format('woff'),
+        url('../styles/fonts/ValueSansPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Value Sans Pro';
+    src: url('ValueSansPro-Bold.eot');
+    src: 
+        url('../styles/fonts/ValueSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../styles/fonts/ValueSansPro-Bold.woff2') format('woff2'),
+        url('../styles/fonts/ValueSansPro-Bold.woff') format('woff'),
+        url('../styles/fonts/ValueSansPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Value Sans Pro';
+    src: url('ValueSansPro-BlackItalic.eot');
+    src: 
+        url('../styles/fonts/ValueSansPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../styles/fonts/ValueSansPro-BlackItalic.woff2') format('woff2'),
+        url('../styles/fonts/ValueSansPro-BlackItalic.woff') format('woff'),
+        url('../styles/fonts/ValueSansPro-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Value Sans Pro';
+    src: url('ValueSansPro-Black.eot');
+    src: 
+        url('../styles/fonts/ValueSansPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('../styles/fonts/ValueSansPro-Black.woff2') format('woff2'),
+        url('../styles/fonts/ValueSansPro-Black.woff') format('woff'),
+        url('../styles/fonts/ValueSansPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Value Sans Pro';
+    src: url('ValueSansPro-Medium.eot');
+    src: 
+        url('../styles/fonts/ValueSansPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../styles/fonts/ValueSansPro-Medium.woff2') format('woff2'),
+        url('../styles/fonts/ValueSansPro-Medium.woff') format('woff'),
+        url('../styles/fonts/ValueSansPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Value Sans Pro';
+    src: url('ValueSansPro-BoldItalic.eot');
+    src: 
+        url('../styles/fonts/ValueSansPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../styles/fonts/ValueSansPro-BoldItalic.woff2') format('woff2'),
+        url('../styles/fonts/ValueSansPro-BoldItalic.woff') format('woff'),
+        url('../styles/fonts/ValueSansPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rimma_sans';
+    src: url('../styles/fonts/rimma-sans-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Fonts end */
