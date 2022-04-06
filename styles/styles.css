@@ -257,15 +257,11 @@ body {
 .middle:hover~.bottom {
     display: flex;
 }
-
-main {
-    margin-top: 120px;
-}
 /* ---Header end--- */
 
 
 
-/* ---Popular begin--- */
+/* ---nav Popular begin--- */
 .popular {
     margin-top: 174px;
 }
@@ -338,8 +334,139 @@ main {
         transform: translateX(-533.766px);
     }
 }
-/* ---Popular end--- */
+/* ---nav Popular end--- */
 
+/* ---Main begin--- */
+/* ---Rolls begin--- */
+.rolls {
+    background-color: rgb(255, 207, 207);
+}
+
+.card {
+    /* display: flex;
+    flex-direction: column; */
+    background-color: rgb(180, 174, 248);
+    
+}
+
+.card-title {
+    font-family: 'Value Sans Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    color: #274646;
+    margin-bottom: 64px;
+}
+
+.card-content {
+    display: grid;
+    gap: 48px 24px;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(1, auto); */
+    /* grid-template-areas: 'card-item card-item card-item card-item'; */
+    background-color: rgb(207, 247, 236);
+    /* width: auto; */
+}
+
+
+.card-item {
+    background-color: yellowgreen;
+    max-width: 274px;
+    padding: 16px;
+    border: 1px solid black;
+}
+
+.card-icons {
+    display: flex;
+    gap: 13.19px;
+    width: 24px;
+    height: 24px;
+}
+
+.card-icons > img {
+    background: #F7F7F7;
+    border-radius: 32px;
+    padding: 5.25px;
+}
+
+.card-image {
+    max-width: 274px;
+    max-height: 176px; 
+    overflow: hidden;
+}
+
+.card-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-description__left {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.card-description__right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 8px;
+    align-items: center;
+}
+
+.card-name {
+    font-family: 'Value Sans Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #6B6B6B;
+    padding-bottom: 4px;
+}
+
+.card-amount {
+    font-family: 'Value Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #757575;
+}
+
+.card-oldprice {
+    font-family: 'Value Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration-line: line-through;
+    color: #A0A0A0;
+    
+}
+
+.card-oldprice::after {
+    content: ' ₽';
+}
+
+.card-newprice {
+    font-family: 'Value Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    color: #274646;
+    background: #E9E6E6;
+    border-radius: 46px;
+    padding: 10px 23.5px;
+    text-decoration: none;
+}
+
+.card-newprice::after {
+    content: ' ₽';
+}
+/* ---Rolls end--- */
+/* ---Main end--- */
 
 
 
