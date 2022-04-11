@@ -381,7 +381,7 @@ body {
 
 .card-content {
     display: grid;
-    gap: 33px 0;
+    gap: 27px 0;
     grid-template-columns: repeat(4, 3fr);
     /* grid-template-rows: repeat(1, auto); */
     /* grid-template-areas: 'card-item card-item card-item card-item'; */
