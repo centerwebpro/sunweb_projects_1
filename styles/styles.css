@@ -303,7 +303,11 @@ body {
     width: auto;
     height: 100%;
 }
+/* ---nav Popular end--- */
 
+
+
+/* ---Main begin--- */
 .scrollline {
     display: flex;
     margin: 0;
@@ -359,9 +363,9 @@ body {
         transform: translateX(-533.766px);
     }
 }
-/* ---nav Popular end--- */
 
-/* ---Main begin--- */
+
+
 /* ---Rolls begin--- */
 /* .rolls {
 } */
@@ -630,13 +634,13 @@ body {
 
 
 /* ---Footer begin--- */
-footer {
+/* Расскоментировать в задаче про футер */
+/* footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     background-color: #274646;
-    /* padding: 0 20px 0 0; */
 }
 
 .footer-top {
@@ -686,7 +690,6 @@ footer {
     display: flex;
     gap: 16px;
     margin-bottom: 64px;
-    /* align-items: center; */
     justify-content: center;
 }
 
@@ -697,7 +700,6 @@ footer {
     width: 100%;
     background-color: #565D95;
     height: 47px;
-    /* margin: 0 60px; */
 }
 
 .footer-description__left {
@@ -720,7 +722,6 @@ footer {
     display: flex;
     gap: 8.38px;
     margin-right: 69px;
-    /* align-items: end; */
     text-decoration: none;
 }
 
@@ -743,23 +744,17 @@ footer {
 
 .footer-description__right-text > p:nth-child(2n + 1) {
     color: #FFFFFF;
-}
-
-.footer-description__right-image {
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* align-items: center; */
-    /* justify-content: center; */
-}
+} */
 /* ---Footer end--- */
 
 
-/* Containers begin */
+/* Media begin */
 @media (max-width: 575px) {
     .container {
         padding: 0 0.75rem;
     }
     
+    /* ---nav Popular begin--- */
     .popular {
         margin-top: 190px;
     }
@@ -767,15 +762,16 @@ footer {
     .popular-item {
         margin-bottom: 34px;
     }
+    /* ---nav Popular end--- */
+
     
+
+    /* ---Main begin--- */
     .scrollline {
         margin: 36px 0 64px 0;
         height: 80px;
         font-size: 60px;
     }
-    
-    
-    
     
     .card-pictures {
         grid-template-columns: repeat(1, 12fr);
@@ -885,6 +881,8 @@ footer {
         line-height: 24px;
         margin: 64px 0;
     }
+        /* ---Main end--- */
+
 }
 
 @media (min-width: 576px) {
@@ -892,9 +890,13 @@ footer {
         max-width: 540px;
     }
 
+
+
+    /* ---Main begin--- */
     .card-content {
         grid-template-columns: repeat(2, 6fr);
     }
+    /* ---Main end--- */
 }
 
 @media (min-width: 768px) {
@@ -902,6 +904,7 @@ footer {
         max-width: 720px;
     }
 
+    /* ---Header begin--- */
     .main-right {
         display: flex;
     }
@@ -927,11 +930,20 @@ footer {
     .bottom {
         padding-left: 17px;
     }
+    /* ---Header end--- */
 
+
+
+    /* ---nav Popular begin--- */
     .popular-items {
         padding-left: 19px;
     }
+    /* ---nav Popular end--- */
 
+
+
+
+    /* ---Main begin--- */
     .card-content {
         gap: 27px 17px;
     }
@@ -949,6 +961,7 @@ footer {
         line-height: 32px;
         margin-bottom: 31px;
     }
+    /* ---Main end--- */
 
 }
 
@@ -956,10 +969,17 @@ footer {
     .container {
         max-width: 960px;
     }
+
+    /* ---Header begin--- */
     .main-left__phone {
         display: block;
     }
 
+    /* ---Header end--- */
+
+
+
+    /* ---Main begin--- */
     .card-image {
         max-height: 200px; 
         height: auto;
@@ -967,13 +987,15 @@ footer {
     .card-content {
         grid-template-columns: repeat(4, 3fr);
     }
-
+    /* ---Main end--- */
 }
 
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
     }
+
+    /* ---Header begin--- */
 
     .main-left {
         padding-left: 17px;
@@ -986,7 +1008,12 @@ footer {
     .bottom {
         padding-left: 11px;
     }
+
+    /* ---Header end--- */
+
+
     
+    /* ---Main begin--- */
     .card-image {
         height: 200px;
     }
@@ -994,7 +1021,7 @@ footer {
     .card {
         margin-left: none;
     }
-
+    /* ---Main end--- */
     
 }
 
@@ -1003,14 +1030,25 @@ footer {
         max-width: 1320px;
     }
 
+    /* ---Header begin--- */
+
     .main-left {
         padding-left: 0;
     }
+    /* ---Header end--- */
+
+
+
+    /* ---nav Popular begin--- */
 
     .popular-items {
         padding-left: 0px;
     }
+    /* ---nav Popular end--- */
 
+
+
+    /* ---Main begin--- */
     .card-content {
         gap: 27px 21px;
     }
@@ -1018,8 +1056,9 @@ footer {
     .card {
         margin: 0 22.5px 0 0;
     }
+    /* ---Main end--- */
 }
-/* Containers end */
+/* Media end */
 
 
 
