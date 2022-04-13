@@ -26,7 +26,6 @@ body {
 .top {
     width: 100%;
     background-color: #274646;
-    
 }
 
 .main {
@@ -48,7 +47,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 26.61px;
-
 }
 
 .main-left__logo {
@@ -204,7 +202,6 @@ body {
 
 .middle-item:hover {
     border-bottom: 3px solid #274646;
-
 }
 
 .middle-hr {
@@ -543,7 +540,6 @@ body {
     line-height: 14px;
     text-decoration-line: line-through;
     color: #A0A0A0;
-    
 }
 
 .card-oldprice::after {
@@ -561,6 +557,7 @@ body {
     border-radius: 46px;
     padding: 10px 23.5px;
     text-decoration: none;
+    border: none;
 }
 
 .card-newprice::after {
@@ -606,8 +603,7 @@ body {
 
 
 /* ---Footer begin--- */
-/* Расскоментировать в задаче про футер */
-/* footer {
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -626,7 +622,7 @@ body {
     margin: 64px 0 22px 0;
 }
 
-.footer-navigation > a {
+.footer-navigation__item {
     color: #F7F7F7;
     text-decoration: none;
     padding: 0 0 40px 0;
@@ -638,7 +634,24 @@ body {
     text-transform: lowercase;
 }
 
-.footer-navigation > a:last-child {
+.footer-navigation__item > a {
+    color: #F7F7F7;
+    text-decoration: none;
+}
+
+.footer-navigation__item > a:hover {
+    color: #FFBDC8;
+}
+
+.footer-navigation__item > a:hover::after {
+    content: '  -';
+    color: #FFBDC8;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 10px;
+}
+
+.footer-navigation__item:last-child {
     padding: 0;
 }
 
@@ -654,7 +667,11 @@ body {
     margin-bottom: 32px;
 }
 
-.footer-logo > img {
+.footer-logo__desktop {
+    margin-bottom: 32px;
+}
+
+.footer-logo__mobile {
     margin-bottom: 32px;
 }
 
@@ -663,6 +680,70 @@ body {
     gap: 16px;
     margin-bottom: 64px;
     justify-content: center;
+}
+
+.footer-social__instagram {
+    background: url('../images/Instagram.svg');
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 32px;
+}
+
+.footer-social__instagram:hover {
+    background: url('../images/Instagram-hover.svg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 32px;
+}
+
+.footer-social__whatsapp {
+    background: url('../images/WhatsApp.svg');
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 32px;
+}
+
+.footer-social__whatsapp:hover {
+    background: url('../images/WhatsApp-hover.svg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 32px;
+}
+
+.footer-social__telegram {
+    background: url('../images/Telegram.svg');
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 32px;
+}
+
+.footer-social__telegram:hover {
+    background: url('../images/Telegram-hover.svg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 32px;
+}
+
+.footer-social__vk {
+    background: url('../images/VK_.svg');
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 32px;
+}
+
+.footer-social__vk:hover {
+    background: url('../images/VK-hover.svg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 32px;
 }
 
 .footer-description {
@@ -699,10 +780,15 @@ body {
 
 .footer-description__right-text {
     display: flex;
-    flex-direction: row;
+    align-items: center;
 }
 
-.footer-description__right-text > p {
+.footer-description__right-text > span {
+    font-size: 0;
+}
+
+.footer-description__right-text > span > mark {
+    font-size: 0;
     font-family: 'Value Sans Pro';
     font-style: normal;
     font-weight: 700;
@@ -710,13 +796,14 @@ body {
     line-height: 120%;
 }
 
-.footer-description__right-text > p:nth-child(1n + 1) {
+.footer-description__right-text > span > mark:nth-child(1n + 1) {
     color: #F2AF29;
+    background-color: #565D95;
 }
 
-.footer-description__right-text > p:nth-child(2n + 1) {
+.footer-description__right-text > span > mark:nth-child(2n + 1) {
     color: #FFFFFF;
-} */
+}
 /* ---Footer end--- */
 
 
@@ -853,7 +940,38 @@ body {
         line-height: 24px;
         margin: 64px 0;
     }
-        /* ---Main end--- */
+    /* ---Main end--- */
+
+    /* ---Footer begin--- */
+    .footer-top {
+        padding-right: 0;
+    }
+
+    .footer-logo__desktop {
+        display: none;
+    }
+
+    .footer-description {
+        flex-direction: column;
+        height: 100%;
+        align-items: end;
+        gap: 16px;
+    }
+
+    .footer-description__left {
+        flex-direction: column;
+        align-items: end;
+        margin: 18px 16px 0 0;
+    }
+    
+    .footer-description__right {
+        margin: 0 16px 12px 0;
+    }
+
+    .footer-navigation {
+        margin: 64px 0 48px 0;
+    }
+    /* ---Footer end--- */
 
 }
 
@@ -874,6 +992,39 @@ body {
         grid-template-rows: 170px auto;
     }
     /* ---Main end--- */
+
+
+
+    /* ---Footer begin--- */
+    .footer-logo__mobile {
+        display: none;
+    }
+
+    .footer-top {
+        padding-right: 0;
+    }
+
+    .footer-description {
+        flex-direction: column;
+        height: 100%;
+        align-items: end;
+        gap: 16px;
+    }
+
+    .footer-description__left {
+        flex-direction: column;
+        align-items: end;
+        margin: 18px 16px 0 0;
+    }
+    
+    .footer-description__right {
+        margin: 0 16px 12px 0;
+    }
+
+    .footer-navigation {
+        margin: 64px 0 24px 0;
+    }
+    /* ---Footer end--- */
 }
 
 @media (min-width: 768px) {
@@ -941,6 +1092,20 @@ body {
     }
     /* ---Main end--- */
 
+
+
+    /* ---Footer begin--- */
+    
+    
+    .footer-description__left {
+        margin: 10px 60px 0 0;
+        flex-direction: row;
+    }
+
+    .footer-description__right {
+        margin: 0 60px 8px 0;
+    }
+    /* ---Footer end--- */
 }
 
 @media (min-width: 992px) {
@@ -970,6 +1135,10 @@ body {
         grid-template-rows: 150px auto;
     }
     /* ---Main end--- */
+
+
+
+
 }
 
 @media (min-width: 1200px) {
@@ -1009,6 +1178,35 @@ body {
     }
     /* ---Main end--- */
     
+
+
+    /* ---Footer begin--- */
+    .footer-top {
+        padding-right: 20px;
+    }
+    
+    .footer-description {
+        flex-direction: row;
+        align-items: center;
+        height: 47px;
+    }
+
+    .footer-description__left {
+        gap: 16px;
+        margin: 0;
+        margin-left: 52px;
+    }
+
+    .footer-description__right {
+        gap: 8.38px;
+        margin: 0;
+        margin-right: 69px;
+    }
+
+    .footer-social {
+        margin-bottom: 61px;
+    }
+    /* ---Footer end--- */
 }
 
 @media (min-width:1400px) {
