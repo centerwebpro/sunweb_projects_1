@@ -409,10 +409,9 @@ body {
     height: 24px;
 }
 
-.card-icons > img {
-    background: #F7F7F7;
-    border-radius: 32px;
-    padding: 5.25px;
+.card-icons > button {
+    border: none;
+    cursor: pointer;
 }
 
 .card-icons__spicy {
@@ -558,6 +557,7 @@ body {
     padding: 10px 23.5px;
     text-decoration: none;
     border: none;
+    cursor: pointer;
 }
 
 .card-newprice::after {
@@ -632,6 +632,7 @@ footer {
     font-size: 24px;
     line-height: 100%;
     text-transform: lowercase;
+    text-align: center;
 }
 
 .footer-navigation__item > a {
