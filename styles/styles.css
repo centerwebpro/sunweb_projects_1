@@ -32,6 +32,7 @@ body {
     display: flex;
     justify-content: space-between;
     height: 54px;
+    position: relative;
 }
 
 .main-left {
@@ -52,12 +53,17 @@ body {
 .main-left__logo {
     display: flex;
     gap: 22px;
+    align-items: center;
 }
 
 .main-left__logo-hamburger {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.main-left__hamburger-imagecross {
+    display: none;
 }
 
 .main-left__logo-icon__big {
@@ -245,6 +251,65 @@ body {
 
 .middle:hover~.bottom {
     display: flex;
+}
+
+.popup {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: blueviolet;
+    display: none;
+
+}
+
+.popup_disable {
+    display: none;
+}
+
+.popup_enable {
+    display: flex;
+}
+
+.popup-left {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    gap: 32px;
+    width: 272px;
+    padding: 64px 0 0 51px;
+    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.popup-left__title {
+    font-family: 'Value Sans Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    text-transform: lowercase;
+    color: #A0A0A0;
+}
+
+.popup-left__link {
+    font-family: 'Value Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    color: #274646;
+    text-decoration: none;
+}
+
+.popup-right {
+    background-color: #274646;
+    box-shadow: -5px 4px 20px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+.popup-white {
+    background-color: rgb(147, 101, 16);
 }
 /* ---Header end--- */
 
