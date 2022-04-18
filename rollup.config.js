@@ -13,7 +13,7 @@ export default {
     },
     plugins: [
         scss({
-            output: "styles.min.css",
+            output: "main.min.css",
             failOnError: true,
             runtime: require("sass"),
             outputStyle: "compressed", // for minify file css
