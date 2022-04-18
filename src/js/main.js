@@ -47,5 +47,3 @@ btn.addEventListener('click', function (event) {
     hamburger.classList.toggle('popup_disable');
     cross.classList.toggle('popup_enable');
 });
-
-console.log('test 12345678')
