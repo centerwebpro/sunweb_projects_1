@@ -42,7 +42,7 @@ export const showMenuHeader = () => {
 
     // For Menu header in mobile ----begin
     let popupLeft = document.querySelector('.popup-left');
-    if (window.innerWidth <= 575) {
+    if (window.innerWidth <= 767) {
         popupLeft.style.width = "0px";
         let popupRight = document.querySelector('.popup-right');
         let popupLeftNav = document.querySelector('.popup-left__nav');
