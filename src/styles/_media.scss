@@ -3,6 +3,36 @@
     .container {
         padding: 0 0.75rem;
     }
+    /* ---Header begin--- */
+    .popup-left__title {
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        transform: rotate(-90deg);
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        color: #274646;
+    }
+
+    .popup-left__title::after {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 75px;
+        content: url('./src/images/menu-top.png');
+        transform: rotate(90deg);
+    }
+
+    .popup-left {
+        width: 0px;
+        padding: 64px 0 50px 66px;
+    }
+
+    .popup-left__nav {
+        display: none;
+    }
+    /* ---Header end--- */
     
     /* ---nav Popular begin--- */
     .popular {
@@ -138,6 +168,10 @@
         padding-right: 0;
     }
 
+    .footer-logo > hr {
+        width: 211px;
+    }
+
     .footer-logo__desktop {
         display: none;
     }
@@ -234,11 +268,11 @@
         width: auto;
     }
 
-    .main-left__logo-icon__big {
+    .main-left__logo-icon__big-box {
         display: block;
     }
 
-    .main-left__logo-icon__mini {
+    .main-left__logo-icon__mini-box {
         display: none;
     }
 

@@ -1,49 +1,30 @@
-import '../styles/main.scss';
+import '../styles/main.scss'; // This used for rollup
 
-function readJson() {
-    const baseUrl = "https://raw.githubusercontent.com/centerwebpro/sunweb_projects_1/main/accepts/data.json";
+import {readJson} from './api.js';
+import {categoryAnimate} from './category_animate.js';
+import {showMenuHeader, showHeaderMiddle} from './header_menu.js';
+// import products from './products/products.js';
+import basket from './basket/basket.js';
+import productsRendering from './products/products_rendering.js';
+import {scrollPopular} from './scrollPopular.js';
 
-    fetch(baseUrl)
-    .then(response => response.json())
-    .then(data => {
-        setNavLinks(data);
-    });
-
-    function setNavLinks(data) {
-        let navBlock = document.querySelector('.middle');
-        if(navBlock) {
-            Object.entries(data).forEach(item => {
-                if (item[1].status == true) {
-                    let navElenet = `<a href="#" class="middle-item">${item[1].name}</a>`;
-                    navBlock.innerHTML += navElenet;
-                }
-            })
-        }
-    }
-}
-
-readJson()
+readJson();
+scrollPopular();
+categoryAnimate();
+showMenuHeader();
+showHeaderMiddle();
+productsRendering();
 
 
-
-// We enable .scrollline-text when full load page
-window.addEventListener('load', (event) => {
-    var elements = document.querySelectorAll('.scrollline-text');
-    for (var i = 0; i < elements.length; i++)
-    elements[i].style.display = 'block';
+let basketAddButton = document.querySelectorAll('.card-newprice').forEach(item => {
+    item.addEventListener('click', function (e) {
+        basket.add(e.target.getAttribute('product_id'));
+    })
 });
 
-
-
-// Menu header fullscreen
-let popup = document.querySelector('.popup');
-let header = document.querySelector('.top');
-let hamburger = document.querySelector('.main-left__hamburger-image');
-let cross = document.querySelector('.main-left__hamburger-imagecross');
-let btn = document.querySelector('.main-left__logo-hamburger');
-btn.addEventListener('click', function (event) {
-    popup.classList.toggle('popup_enable');
-    header.classList.toggle('popup-white');
-    hamburger.classList.toggle('popup_disable');
-    cross.classList.toggle('popup_enable');
+let basketDeleteButton = document.querySelectorAll('.card-oldprice').forEach(item => {
+    item.addEventListener('click', function (e) {
+        basket.delete(e.target.parentElement.querySelector('.card-newprice').getAttribute('product_id'));
+    })
 });
+
