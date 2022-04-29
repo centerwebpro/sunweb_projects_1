@@ -15,10 +15,13 @@ export const showMenuHeader = () => {
     let shiming = document.querySelector('.main-right__shimingi-title');
     let shimingImage = document.querySelector('.main-right__shimingi-image');
     let shimingImageMenu = document.querySelector('.main-right__shimingi-imagemenu');
-    let shoppingImage = document.querySelector('.main-right__shoppingBag-image');
-    let shoppingImageMenu = document.querySelector('.main-right__shoppingBag-imagemenu');
-    let priceBasket = document.querySelector('.main-right__shoppingBag-price');
+    let shoppingImage = document.querySelectorAll('.main-right__shoppingBag-image');
+    let shoppingImageMenu = document.querySelectorAll('.main-right__shoppingBag-imagemenu');
+    let shoppingText = document.querySelector('.main-right__shoppingBag-text');
+    let priceBasket = document.querySelectorAll('.main-right__shoppingBag-price');
     let phone = document.querySelector('.main-left__phone');
+    let product = document.querySelector('.product');
+    let productContent = document.querySelector('.product-content');
     btn.addEventListener('click', function () {
         popup.classList.toggle('popup_enable');
         header.classList.toggle('popup-white');
@@ -34,15 +37,19 @@ export const showMenuHeader = () => {
         shiming.classList.toggle('popup-lightgreen');
         shimingImage.classList.toggle('popup_disable');
         shimingImageMenu.classList.toggle('popup_enable');
-        shoppingImage.classList.toggle('popup_disable');
-        shoppingImageMenu.classList.toggle('popup_enable');
-        priceBasket.classList.toggle('popup_darkgreen');
+        shoppingText.classList.toggle('popup_darkgreen');
+        shoppingImage.forEach(item => item.classList.toggle('popup_disable'));
+        shoppingImageMenu.forEach(item => item.classList.toggle('popup_enable'));
+        priceBasket.forEach(item => item.classList.toggle('popup_darkgreen'));
+        // priceBasket.classList.toggle('popup_darkgreen');
         phone.classList.toggle('popup_enable');
+        product.classList.toggle('popup_enable');
+        productContent.classList.toggle('popup_pink');
     });
 
     // For Menu header in mobile ----begin
     let popupLeft = document.querySelector('.popup-left');
-    if (window.innerWidth <= 767) {
+    if (window.innerWidth <= 575) {
         popupLeft.style.width = "0px";
         let popupRight = document.querySelector('.popup-right');
         let popupLeftNav = document.querySelector('.popup-left__nav');
@@ -63,11 +70,21 @@ export const showMenuHeader = () => {
             popupRight.style.cursor = "default";
             footerTop.style.minWidth = "none";
         });
-        console.log('windows');
-    } else {
-        popupLeft.style.width = "272px";
+        
+        // If resize windows, we check if screen big then correct style
+        function onResize() {
+            console.log('123', window.innerWidth);
+            if (window.innerWidth > 575) {
+                popupLeft.style.width = "272px";
+                popupRight.style.width = "100%";
+            }
+        }
+        window.addEventListener('resize', onResize);
+
     }
-    // For Menu header in mobile ----end
+
+
+
 };
 
 // For Menu header middle 

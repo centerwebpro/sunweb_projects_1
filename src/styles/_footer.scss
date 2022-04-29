@@ -33,22 +33,33 @@ footer {
 }
 
 .footer-navigation__item > a {
+    position: relative;
+    left: 0px;
+    transition: left ease 0.5s;
     color: #F7F7F7;
     text-decoration: none;
     transition: 0.5s;
 }
 
-.footer-navigation__item > a:hover {
-    color: #FFBDC8;
-}
-
-.footer-navigation__item > a:hover::after {
+.footer-navigation__item > a::after {
     content: '  -';
-    color: #FFBDC8;
+    color: #274646;
     font-size: 24px;
     font-weight: 900;
     line-height: 10px;
     transition: 0.5s;
+}
+
+.footer-navigation__item > a:hover {
+    // position: relative;
+    left: -10px;
+    color: #FFBDC8;
+    // transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+.footer-navigation__item > a:hover::after {
+    color: #FFBDC8;
 }
 
 
@@ -83,36 +94,37 @@ footer {
     justify-content: center;
 }
 
-.footer-social__instagram {
-    background: url('./src/images/Instagram.svg');
+.footer-social__image {
+    position: relative;
     height: 32px;
     width: 32px;
-    background-repeat: no-repeat;
-    background-position: center; 
     background-size: 32px;
 }
 
-.footer-social__instagram:hover {
-    background: url('./src/images/Instagram-hover.svg');
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size: 32px;
+.footer-social__image:hover .footer-social__image-pink {
+    opacity: 1;
 }
 
-.footer-social__whatsapp {
-    background: url('./src/images/WhatsApp.svg');
+.footer-social__image:hover .footer-social__image-white {
+    opacity: 0;
+}
+
+.footer-social__image-white {
+    position: absolute;
+    opacity: 1;
+    transition: 0.5s;
     height: 32px;
     width: 32px;
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size: 32px;
 }
 
-.footer-social__whatsapp:hover {
-    background: url('./src/images/WhatsApp-hover.svg');
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size: 32px;
+.footer-social__image-pink {
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.footer-social__image-pink > img {
+    height: 32px;
+    width: 32px;
 }
 
 .footer-social__telegram {
